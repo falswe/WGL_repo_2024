@@ -118,8 +118,7 @@ When a neighbor node receives the query, it processes it based on the following 
 struct QueryResult {
 	flood_id: u64,
 	sourceRoutingHeader: SourceRoutingHeader,
-	path_trace: Vec<u64>,
-	node_types: Vec<NodeType>
+	path_trace: Vec<(u64, NodeType)>
 }
 ```
 
