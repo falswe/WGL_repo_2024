@@ -101,9 +101,7 @@ struct Query {
 	/// When ttl reaches 0, we start a QueryResult message that reaches back to the initiator
 	ttl: u64,
 	/// Records the nodes that have been traversed (to track the connections).
-	path_trace: Vec<u64>;
-	// node_types is a vector with corresponding NodeTypes (NodeType may be an enum?)
-	node_types: Vec<NodeType>
+	path_trace: Vec<(u64, NodeType)>
 }
 ```
 
