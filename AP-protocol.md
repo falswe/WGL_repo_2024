@@ -92,6 +92,8 @@ To do so, they must use the **Network Discovery Protocol**. The Network Discover
 The client or server that wants to learn the topology, called the **initiator**, starts by flooding a query to all its immediate neighbors:
 
 ```rust
+enum NodeType{Client, Drone, Server}
+
 struct Query {
 	/// Unique identifier of the flood, to prevent loops.
 	flood_id: u64,
