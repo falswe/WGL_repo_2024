@@ -2,4 +2,7 @@
 name = "wgl_repo_2024"
 edition = "2021"
 
+[lib]
+path = "src/lib.rs"
+
 [dependencies]
