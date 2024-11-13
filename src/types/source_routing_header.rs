@@ -1,4 +1,6 @@
 pub type NodeId = u8;
 
-// False types to make cargo run happy
-pub type SourceRoutingHeader = [NodeId; 16];
+#[derive(Debug)]
+pub struct SourceRoutingHeader {
+    pub hops: Vec<NodeId>,
+}

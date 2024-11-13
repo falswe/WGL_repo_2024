@@ -1,3 +1,4 @@
+use serde::Deserialize;
 use crate::types::source_routing_header::NodeId;
 use std::cell::RefCell;
 use std::collections::HashMap;
@@ -20,7 +21,7 @@ pub enum NodeType {
     Drone(NodeId),
 }
 
-#[derive(Debug)]
+#[derive(Debug, Deserialize)]
 pub enum ServerType {
     Chat,
     Text,

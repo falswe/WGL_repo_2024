@@ -3,7 +3,7 @@ use crate::types::source_routing_header::{NodeId, SourceRoutingHeader};
 // Is atomic unit to be sent
 pub struct Packet {
     pack_type: PacketType,
-    routing_header: SourceRoutingHeader,
+    pub routing_header: SourceRoutingHeader,
     session_id: u64,
 }
 
